@@ -48,6 +48,8 @@ $ npm start (to start the server)
 - User registration and login
 - Authentication using JWT Tokens
 - Responsive Design
+- Game archive with rating and reviews
+- Statistics displayed with Chart.js
 
 <br/>
 

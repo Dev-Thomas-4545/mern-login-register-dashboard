@@ -65,3 +65,28 @@ app.post('/login', (req, res) => {
             }
         })
 })
+
+// games endpoints
+app.get('/games', (req, res) => {
+    const SQL = 'SELECT * FROM games';
+    db.query(SQL, (err, results) => {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send(results);
+        }
+    });
+});
+
+app.post('/games', (req, res) => {
+    const { title, rating, comment } = req.body;
+    const SQL = 'INSERT INTO games (title, rating, comment) VALUES (?,?,?)';
+    const Values = [title, rating, comment];
+    db.query(SQL, Values, (err) => {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send({ message: 'Game added!' });
+        }
+    });
+});
