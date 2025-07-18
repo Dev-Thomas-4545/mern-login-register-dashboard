@@ -6,6 +6,8 @@ import { MdDeliveryDining, MdOutlineExplore, MdOutlinePermContactCalendar } from
 import { BsTrophy, BsCreditCard2Front, BsQuestionCircle } from 'react-icons/bs'
 import { AiOutlinePieChart } from 'react-icons/ai'
 import { BiTrendingUp, BiLogOutCircle } from 'react-icons/bi'
+import { FaGamepad } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
   return (
@@ -56,6 +58,15 @@ const Sidebar = () => {
                 Products
               </span>
             </a>
+          </li>
+
+          <li className="listItem">
+            <Link to="/games" className="menuLink flex">
+              <FaGamepad className="icon" />
+              <span className="smallText">
+                Games
+              </span>
+            </Link>
           </li>
         </ul>
       </div>

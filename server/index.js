@@ -65,3 +65,24 @@ app.post('/login', (req, res) => {
             }
         })
 })
+
+// In-memory store for games
+const games = []
+
+// Get all games
+app.get('/games', (req, res) => {
+    res.send(games)
+})
+
+// Add a new game
+app.post('/games', (req, res) => {
+    const { title, rating, review } = req.body
+    const newGame = {
+        id: games.length + 1,
+        title,
+        rating,
+        review
+    }
+    games.push(newGame)
+    res.send({ message: 'Game added!', game: newGame })
+})
