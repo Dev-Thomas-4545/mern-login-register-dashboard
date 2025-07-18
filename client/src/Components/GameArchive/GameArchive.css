@@ -1,0 +1,22 @@
+.gameArchive {
+  padding: 2rem;
+}
+.gameForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+}
+.gameList {
+  list-style: none;
+  padding: 0;
+}
+.gameItem {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+.chartContainer {
+  max-width: 600px;
+  margin-top: 2rem;
+}
