@@ -51,6 +51,23 @@ INSERT INTO `users` (`id`, `email`, `username`, `password`) VALUES
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
+-- Indexes for table `games`
+ALTER TABLE `games`
+  ADD PRIMARY KEY (`id`);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `games`
+--
+
+CREATE TABLE `games` (
+  `id` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `rating` int(11) DEFAULT NULL,
+  `comment` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- AUTO_INCREMENT for dumped tables
 --
@@ -60,6 +77,8 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `games`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
